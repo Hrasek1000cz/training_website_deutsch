@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-size: 30px;
+                margin: 0;
+            }
+            button{
+                width: 33%;;
+                height: 100%;
+                font-size: 20px;
+            }
+            .bbb{
+                color: var(--color);
+            }
+        </style>
+		<script src="GE\skript.js" defer></script>
+        <script src="GE\slovicka.js" defer></script>
+    </head>
+    <body>
+        <header style="height: 100%; width: 100%; position: fixed;">
+            <div style="width: 100%; height: 10%;  "> <! -- Odchod atd-->
+                <button onclick="restart()">Restart</button><button onclick="dalsien()">Prohodit</button><button onclick="zmenalekc()">Změna lekce</button>
+            </div>
+            <div style="width: 100%;height: 4%; background-color: black;"><! -- progres bar-->
+                <div style="background-color: rgb(30, 233, 30); width: var(--length_progress); height: 100%; text-align:right; "><a style="color: white; " class="progress"></a></div>
+            </div>
+            <div style="width: 100%;height: 11%;"><! -- popis-->
+                <a class="pocetslov"></a>
+            </div>
+            <div style="width: 100%;height: 50%; background-color: gainsboro; text-align: center; " ><! -- karta-->
+                <br><a class="lekce"></a><br><br><a class="aaa"></a><br><a>-</a><br><a class="bbb"></a>
+            </div>
+            <div style="width: 100%;height: 25%; text-align: center; "> <! -- správná dopověď-->
+                <div style="padding-top: 20px;height: 100%; width: 100%;"onclick="odpověď()">Správná odpověď</div>
+            </div>
+            <div style="top: 25%; right: 0;position: fixed; width: 50%; height: 50%; border-right: 20px solid rgb(30, 233, 30);" onclick="dobre()"></div><div style="top: 25%; left: 0; position: fixed; width: 50%; height: 50%; border-left: 20px solid red; " onclick="spatne()"></div>
+        </header>
+    </body>
+</html>
