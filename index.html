@@ -14,12 +14,48 @@
             .bbb{
                 color: var(--color);
             }
+            .lekcovna{
+                position: fixed;
+                overflow-x: scroll;
+                width: 100%;
+                height: 100%;
+                background-color: aliceblue;
+                z-index: var(--indexka);
+            }
+            .krizek{
+                width: 1.5em;
+                height: 1.5em;
+                position: fixed;
+                background-color: grey;
+                font-size: 2em;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                right: 0%;
+                top: 0%;
+            }
+            .krizek:hover{
+                background-color: black;
+            }
+            .divkoLekce{
+                border: solid 1px;
+                text-align: center;
+                font-size: 1.3em;
+            }
+            .divkoLekce:hover{
+                background-color: grey;
+                color: white;
+            }
         </style>
 		<script src="GE\skript.js" defer></script>
         <script src="GE\slovicka.js" defer></script>
     </head>
     <body>
-        <header style="height: 100%; width: 100%; position: fixed;">
+        <div class="lekcovna">
+
+        </div>
+        <header style="height: 100%; width: 100%; position: fixed; background-color: white;">
             <div style="width: 100%; height: 10%;  "> <! -- Odchod atd-->
                 <button onclick="restart()">Restart</button><button onclick="dalsien()">Prohodit</button><button onclick="zmenalekc()">Změna lekce</button>
             </div>
