@@ -1579,7 +1579,7 @@ const lekce ={
             134: ["verkaufen", "prod(áv)at"],  
             135: ["", ""], 
             136: ["", ""], 
-            "počet": 116
+            "počet": 135
         }
 
     }
