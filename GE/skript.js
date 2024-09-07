@@ -6,7 +6,7 @@ let addonka;
 document.addEventListener("DOMContentLoaded", function all() {
     document.documentElement.style.setProperty('--indexka', `-50` );
     progressNUM = 0;
-    document.documentElement.style.setProperty('--color', "gainsboro" );
+    document.documentElement.style.setProperty('--color', 0 );
     randomak = Math.floor(Math.random() * lekce[lekceURC]["počet"]);
     zakázNUMS.push(randomak);
     while(zakázNUMS.includes(randomak)){
@@ -14,14 +14,24 @@ document.addEventListener("DOMContentLoaded", function all() {
     }
     document.querySelector('.lekce').textContent = `Lekce ${lekceURC}`;
     document.querySelector('.pocetslov').textContent = `Budoucí popis lekce (počet slov:${lekce[lekceURC]["počet"]})`;
-    document.querySelector('.aaa').textContent = `${lekce[lekceURC][randomak][0]}`;
-    document.querySelector('.bbb').textContent = `${lekce[lekceURC][randomak][1]}`;
+    document.querySelector(`.aaa`).innerHTML = printer(lekce[lekceURC][randomak][0]);
+    document.querySelector(`.bbb`).innerHTML = printer(lekce[lekceURC][randomak][1]);
     document.querySelector('.progress').textContent = `${progressNUM}%`;
     document.documentElement.style.setProperty('--length_progress', `${progressNUM}%` );
-})
+});
+function printer(text){
+    if (text.startsWith("die ")) {
+        return `<strong><span style="color: red;">die</span></strong> ${text.slice(4)}`;
+    } else if (text.startsWith("das ")) {
+        return `<strong><span style="color: green;">das</span></strong> ${text.slice(4)}`;
+    } else if (text.startsWith("der ")) {
+        return `<strong><span style="color: blue;">der</span></strong> ${text.slice(4)}`;
+    }
+    return text;
+}
 let randomak;
 function dalsi(){
-    document.documentElement.style.setProperty('--color', "gainsboro" );
+    document.documentElement.style.setProperty('--color', 0 );
     if(addonka === undefined){
         randomak = Math.floor(Math.random() * lekce[lekceURC]["počet"]);
     }else{
@@ -42,23 +52,23 @@ function dalsi(){
             if(prohazovac === 1){
                 if(addonka === undefined){
                     document.querySelector('.lekce').textContent = `Lekce ${lekceURC}`;
-                    document.querySelector('.aaa').textContent = `${lekce[lekceURC][spatneNUMS[randomak]][0]}`;
-                    document.querySelector('.bbb').textContent = `${lekce[lekceURC][spatneNUMS[randomak]][1]}`;
+                    document.querySelector('.aaa').innerHTML =  printer(lekce[lekceURC][spatneNUMS[randomak]][0]);
+                    document.querySelector('.bbb').innerHTML =  printer(lekce[lekceURC][spatneNUMS[randomak]][1]);
                 }else{
                     document.querySelector('.lekce').textContent = `Lekce ${lekceURC} - slovesa`;
-                    document.querySelector('.aaa').textContent = `${lekce["slovesa"][lekceURC][spatneNUMS[randomak]][0]}`;
-                    document.querySelector('.bbb').textContent = `${lekce["slovesa"][lekceURC][spatneNUMS[randomak]][1]}`;
+                    document.querySelector('.aaa').innerHTML =  printer(lekce["slovesa"][lekceURC][spatneNUMS[randomak]][0]);
+                    document.querySelector('.bbb').innerHTML =  printer(lekce["slovesa"][lekceURC][spatneNUMS[randomak]][1]);
                 }
 
             }else{
                 if(addonka === undefined){
                     document.querySelector('.lekce').textContent = `Lekce ${lekceURC}`;
-                    document.querySelector('.aaa').textContent = `${lekce[lekceURC][spatneNUMS[randomak]][1]}`;
-                    document.querySelector('.bbb').textContent = `${lekce[lekceURC][spatneNUMS[randomak]][0]}`;
+                    document.querySelector('.aaa').innerHTML = printer(lekce[lekceURC][spatneNUMS[randomak]][1]);
+                    document.querySelector('.bbb').innerHTML = printer(lekce[lekceURC][spatneNUMS[randomak]][0]);
                 }else{
                     document.querySelector('.lekce').textContent = `Lekce ${lekceURC} - slovesa`;
-                    document.querySelector('.aaa').textContent = `${lekce["slovesa"][lekceURC][spatneNUMS[randomak]][1]}`;
-                    document.querySelector('.bbb').textContent = `${lekce["slovesa"][lekceURC][spatneNUMS[randomak]][0]}`;
+                    document.querySelector('.aaa').innerHTML = printer(lekce["slovesa"][lekceURC][spatneNUMS[randomak]][1]);
+                    document.querySelector('.bbb').innerHTML = printer(lekce["slovesa"][lekceURC][spatneNUMS[randomak]][0]);
                 }
             }
             console.log(zakázNUMS.length);
@@ -85,22 +95,22 @@ function dalsi(){
         if(prohazovac === 1){
             if(addonka === undefined){
                 document.querySelector('.lekce').textContent = `Lekce ${lekceURC}`;
-                document.querySelector('.aaa').textContent = `${lekce[lekceURC][randomak][0]}`;
-                document.querySelector('.bbb').textContent = `${lekce[lekceURC][randomak][1]}`;
+                document.querySelector('.aaa').innerHTML = printer(lekce[lekceURC][randomak][0]);
+                document.querySelector('.bbb').innerHTML = printer(lekce[lekceURC][randomak][1]);
             }else{
                 document.querySelector('.lekce').textContent = `Lekce ${lekceURC} - slovesa`;
-                document.querySelector('.aaa').textContent = `${lekce["slovesa"][lekceURC][randomak][0]}`;
-                document.querySelector('.bbb').textContent = `${lekce["slovesa"][lekceURC][randomak][1]}`;
+                document.querySelector('.aaa').innerHTML = printer(lekce["slovesa"][lekceURC][randomak][0]);
+                document.querySelector('.bbb').innerHTML = printer(lekce["slovesa"][lekceURC][randomak][1]);
             }
         }else{
             if(addonka === undefined){
                 document.querySelector('.lekce').textContent = `Lekce ${lekceURC}`;
-                document.querySelector('.aaa').textContent = `${lekce[lekceURC][randomak][1]}`;
-                document.querySelector('.bbb').textContent = `${lekce[lekceURC][randomak][0]}`;
+                document.querySelector('.aaa').innerHTML = printer(lekce[lekceURC][randomak][1]);
+                document.querySelector('.bbb').innerHTML = printer(lekce[lekceURC][randomak][0]);
             }else{
                 document.querySelector('.lekce').textContent = `Lekce ${lekceURC} - slovesa`;
-                document.querySelector('.aaa').textContent = `${lekce["slovesa"][lekceURC][randomak][1]}`;
-                document.querySelector('.bbb').textContent = `${lekce["slovesa"][lekceURC][randomak][0]}`;
+                document.querySelector('.aaa').innerHTML = printer(lekce["slovesa"][lekceURC][randomak][1]);
+                document.querySelector('.bbb').innerHTML = printer(lekce["slovesa"][lekceURC][randomak][0]);
             }
         }
         console.log(zakázNUMS.length);
@@ -176,7 +186,7 @@ function dalsien(){
     dalsi();
 }
 function odpověď(){
-    document.documentElement.style.setProperty('--color', "black" );
+    document.documentElement.style.setProperty('--color', 1 );
 }
 function zmenalekc(){
     document.documentElement.style.setProperty('--indexka', `50` );
