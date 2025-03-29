@@ -1190,7 +1190,7 @@ const lekce ={
         99: ["", ""],      
         100: ["", ""],    
         "počet": 60
-    },,
+    },
     11: {
         0: ["die Wegbeschreibung/-e", "popis cesty"],
         1: ["", ""],
