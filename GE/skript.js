@@ -198,7 +198,7 @@ function zmenalekc(){
         zobrazko = `<div class="divkoLekce" onclick="nastaveniLekce(${lekceNUM})" >${lekceNUM}. všeobecná lekce [${lekce[lekceNUM]["počet"]} slov]</div>`;
     }
 
-    while (lekceNUM < 10){
+    while (lekceNUM < 11){
         lekceNUM = lekceNUM + 1;
         if((lekceURC === lekceNUM)&&(addonka === undefined)){
             zobrazko = zobrazko + `<div class="divkoLekce" onclick="nastaveniLekce(${lekceNUM})" style="background-color: yellow;">${lekceNUM}. všeobecná lekce [${lekce[lekceNUM]["počet"]} slov]</div>`;
@@ -213,9 +213,9 @@ function zmenalekc(){
     }else{
         zobrazko = zobrazko + `<div class="divkoLekce" onclick="zmenaAddonky(${addon}, ${lekceNUM})" >${lekceNUM}. lekce (slovesa) [${lekce["slovesa"][lekceNUM]["počet"]} slov]</div>`;
     }
-    while (lekceNUM < 11){
+    while (lekceNUM < 12){
         lekceNUM = lekceNUM + 1;
-        if(lekceNUM != 11){
+        if(lekceNUM != 12){
             if((lekceURC === lekceNUM)&&(addonka === addon)){
                 zobrazko = zobrazko + `<div class="divkoLekce" onclick="zmenaAddonky(${addon}, ${lekceNUM})" style="background-color: yellow;">${lekceNUM}. lekce (slovesa) [${lekce["slovesa"][lekceNUM]["počet"]} slov]</div>`;
             }else{
