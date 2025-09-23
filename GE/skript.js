@@ -1,6 +1,6 @@
 let zakázNUMS =[];
 let prohazovac = 1;
-let lekceURC = 11;
+let lekceURC = 12;
 let progressNUM = 0;
 let addonka;
 document.addEventListener("DOMContentLoaded", function all() {
@@ -248,3 +248,4 @@ function nastaveniLekce(num){
     zmizeniVyberLekci();
     dalsi();
 }
+
