@@ -339,7 +339,7 @@ const lekce ={
                 ["die Wịrklichkeit, -en", "skutečnost"],      
                 ["die Zahnradbahn, -en", "ozubnicová dráha, zubačka"]    
             ]
-        ],,
+        ],
         [
             ["Lekce 13 - důležité"],
             [
