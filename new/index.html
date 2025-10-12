@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">        
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js"></script>
+  <script src="skript.js"></script>
+
+  <title>Jazykovka</title>
+
+</head>
+<body>
+  <nav >
+      <div onclick="startNew()">Restart</div>
+      <div onclick="prohozeni()">Prohodit</div>
+      <div onclick="zmenalekce()">Změna lekce<a id="info">---</a></div>
+  </nav>
+  <div class="percent">
+    <div style="border-color: darkgreen;background-color: rgb(30, 233, 30); width: var(--length_progress); height: 100%; text-align:right; display: flex; justify-content: right; align-items: center;"><a style="color: white; " class="progress"></a></div>
+  </div>
+  <div class="around">
+    <div class="karta" id="karta">---</div>
+  </div>
+
+        <div class="lekcovna">
+          <div class="lekcolista">
+            <div class="listakriz" onclick="leave()">×</div>
+          </div>
+          <div class="showerlista">
+          </div>
+        </div>
+  <script>
+    
+    const karta = document.getElementById('karta');
+    karta.addEventListener('mousedown', startDrag);
+    document.addEventListener('mousemove', onDrag);
+    document.addEventListener('mouseup', endDrag);
+    karta.addEventListener('touchstart', startDrag);
+    document.addEventListener('touchmove', onDrag);
+    document.addEventListener('touchend', endDrag);
+  </script>
+</body>
+</html>
