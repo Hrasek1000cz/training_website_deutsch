@@ -1,4 +1,4 @@
-let lekceAktualni = 3;
+let lekceAktualni = 4;
 document.addEventListener("DOMContentLoaded", function all() {
     for(let x = 0; x < lekce["lekce"].length; x++){
         document.querySelector('.showerlista').innerHTML += `<div onclick="changeLekce(${x})">${lekce["lekce"][x][0][0]} | ${lekce["lekce"][x][1].length} slov</div>`;
