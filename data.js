@@ -1276,6 +1276,6 @@ const lekce ={
         ["zusätzlich", "dodatečný, doplňkový"],
         ["die Zuverlässigkeit (j. č.)", "spolehlivost"]
     ]
-        
+        ]
     ],
 }
