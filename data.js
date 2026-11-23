@@ -1658,6 +1658,7 @@ const lekce ={
                 ["der Zweig, -e", "odvětví, obor"]
             ]
         ],
+        [
             ["Lekce 20 - Podstatná jména"],
             [
                 ["die Ạbwechslung, -en", "změna, rozmanitost"],
@@ -1763,8 +1764,8 @@ const lekce ={
                 ["die Zipline", "lanový skluz"],
                 ["die Zutat, -en", "přísada"],
                 ["der Zweig, -e", "odvětví, obor"]
-            ],
-            
+            ]],
+            [
             ["Lekce 20 - Přídavná jména"],
             [
                 ["ạchteckig", "osmistranný"],
@@ -1792,8 +1793,8 @@ const lekce ={
                 ["ụnvergesslich", "nezapomenutelný"],
                 ["wẹltbekannt", "světoznámý"],
                 ["wẹltweit", "celosvětový"]
-            ],
-            
+            ]],
+            [
             ["Lekce 20 - Slovesa"],
             [
                 ["ạb|lehnen (h. abgelehnt)", "odmítnout, zamítnout"],
@@ -1852,8 +1853,8 @@ const lekce ={
                 ["zählen (h. gezählt) (zu + 3. p.)", "patřit, počítat se k čemu, do čeho"],
                 ["zurụ̈ck|gehen (i. zurückgegangen) (auf + 4. p.)", "vzniknout, mít původ"],
                 ["zurụ̈ck|kehren (i. zurückgekehrt)", "vrátit se, vracet se"]
-            ],
-            
+            ]],
+            [
             ["Lekce 20 - Zbytek"],
             [
                 ["Alphorn blasen", "hrát na alpský roh"],
@@ -1873,6 +1874,6 @@ const lekce ={
                 ["strömender Regen", "liják, silný déšť"],
                 ["umsọnst", "zdarma, bezplatně"],
                 ["zur Abwechslung", "pro změnu"]
-            ]
+            ]]
     ],
 }
